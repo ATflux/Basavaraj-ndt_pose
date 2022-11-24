@@ -1,0 +1,20 @@
+## Request to plan a path
+geometry_msgs/PoseWithCovarianceStamped start
+
+# goal: Specification of the goal conditions
+geometry_msgs/PoseStamped goal
+
+int8 BOPT_id
+
+---
+#result definition
+# path: Resulting path, empty if no path is found
+nav_msgs/Path path
+
+---
+#feedback
+
+uint8 STATUS_PLANNING_DONE = 0
+uint8 STATUS_PLANNING = 2
+uint8 STATUS_PLANNING_FAILED = 9
+uint8 status

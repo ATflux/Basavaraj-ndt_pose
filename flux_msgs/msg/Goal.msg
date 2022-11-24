@@ -1,0 +1,2 @@
+string bopt_id
+geometry_msgs/PoseStamped bopt_goal

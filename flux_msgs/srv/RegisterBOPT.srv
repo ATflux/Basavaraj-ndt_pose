@@ -1,0 +1,4 @@
+std_msgs/String bopt_id
+std_msgs/String action_server_name
+---
+std_msgs/Bool register_status

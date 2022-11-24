@@ -1,0 +1,623 @@
+<!-- #################################################################
+     #
+     # configuration file for modules 11.01.2017 by M. Dupuis
+     #
+     # (c)2017 by VIRES Simulationstechnologie GmbH
+     #
+     #################################################################
+-->
+<RDB>
+    <Port name="RDBraw" number="48190" type="TCP" />
+</RDB>
+<Debug    enable="true"
+          lightSource="false"
+          driver="false" />
+<Sensor name="DefaultPerfectSensor" type="video">
+    <Load     lib="libModulePerfectSensor.so" path="" persistent="true" />
+    <Frustum  near="0.0" far="50.0" left="10.0" right="10.0" bottom="3.0" top="3.0" />
+    <Cull     maxObjects="5" enable="true" />
+    <Port     name="RDBout" number="48195" type="TCP" sendEgo="true" />
+    <Player   default="true" />
+    <Position dx="3.5" dy="0.0" dz="0.5" dhDeg="0.0" dpDeg="0.0" drDeg="0.0" />
+    <Database resolveRepeatedObjects="true" continuousObjectTesselation="2.0" />
+    <Filter   objectType="pedestrian"/>
+    <Filter   objectType="vehicle"/>
+    <Filter   objectType="trafficSign"/>
+    <Filter   objectType="lane"/>
+    <Debug    enable="false"
+              detection="false"
+              road="false"  
+              position="true"
+              dimensions="false" 
+              camera="false" 
+              CSV="false"
+              packages="false"
+              culling="true"
+              contactPoints="false"
+              trafficSigns="false"/>
+</Sensor>
+
+
+<DynamicsPlugin name="ego1">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node1"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego1"
+        speed_topic="/actuate/speed/ego1"
+        steering_topic="/actuate/steering/ego1"
+        brake_topic="/actuate/brake/ego1" />
+    <RosPublisherTopic ego_info="/actuate/ego1_info" />
+    <Player   id="1"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego2">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node2"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego2"
+        speed_topic="/actuate/speed/ego2"
+        steering_topic="/actuate/steering/ego2"
+        brake_topic="/actuate/brake/ego2" />
+    <RosPublisherTopic ego_info="/actuate/ego2_info" />
+    <Player   id="2"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego3">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node3"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego3"
+        speed_topic="/actuate/speed/ego3"
+        steering_topic="/actuate/steering/ego3"
+        brake_topic="/actuate/brake/ego3" />
+    <RosPublisherTopic ego_info="/actuate/ego3_info" />
+    <Player   id="3"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego4">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node4"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego4"
+        speed_topic="/actuate/speed/ego4"
+        steering_topic="/actuate/steering/ego4"
+        brake_topic="/actuate/brake/ego4" />
+    <RosPublisherTopic ego_info="/actuate/ego4_info" />
+    <Player   id="4"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego5">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node5"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego5"
+        speed_topic="/actuate/speed/ego5"
+        steering_topic="/actuate/steering/ego5"
+        brake_topic="/actuate/brake/ego5" />
+    <RosPublisherTopic ego_info="/actuate/ego5_info" />
+    <Player   id="5"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego6">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node6"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego6"
+        speed_topic="/actuate/speed/ego6"
+        steering_topic="/actuate/steering/ego6"
+        brake_topic="/actuate/brake/ego6" />
+    <RosPublisherTopic ego_info="/actuate/ego6_info" />
+    <Player   id="6"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego7">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node7"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego7"
+        speed_topic="/actuate/speed/ego7"
+        steering_topic="/actuate/steering/ego7"
+        brake_topic="/actuate/brake/ego7" />
+    <RosPublisherTopic ego_info="/actuate/ego7_info" />
+    <Player   id="7"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego8">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node8"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego8"
+        speed_topic="/actuate/speed/ego8"
+        steering_topic="/actuate/steering/ego8"
+        brake_topic="/actuate/brake/ego8" />
+    <RosPublisherTopic ego_info="/actuate/ego8_info" />
+    <Player   id="8"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego9">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node9"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego9"
+        speed_topic="/actuate/speed/ego9"
+        steering_topic="/actuate/steering/ego9"
+        brake_topic="/actuate/brake/ego9" />
+    <RosPublisherTopic ego_info="/actuate/ego9_info" />
+    <Player   id="9"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego10">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node10"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego10"
+        speed_topic="/actuate/speed/ego10"
+        steering_topic="/actuate/steering/ego10"
+        brake_topic="/actuate/brake/ego10" />
+    <RosPublisherTopic ego_info="/actuate/ego10_info" />
+    <Player   id="10"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego11">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node11"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego11"
+        speed_topic="/actuate/speed/ego11"
+        steering_topic="/actuate/steering/ego11"
+        brake_topic="/actuate/brake/ego11" />
+    <RosPublisherTopic ego_info="/actuate/ego11_info" />
+    <Player   id="11"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego12">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node12"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego12"
+        speed_topic="/actuate/speed/ego12"
+        steering_topic="/actuate/steering/ego12"
+        brake_topic="/actuate/brake/ego12" />
+    <RosPublisherTopic ego_info="/actuate/ego12_info" />
+    <Player   id="12"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego13">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node13"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego13"
+        speed_topic="/actuate/speed/ego13"
+        steering_topic="/actuate/steering/ego13"
+        brake_topic="/actuate/brake/ego13" />
+    <RosPublisherTopic ego_info="/actuate/ego13_info" />
+    <Player   id="13"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego14">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node14"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego14"
+        speed_topic="/actuate/speed/ego14"
+        steering_topic="/actuate/steering/ego14"
+        brake_topic="/actuate/brake/ego14" />
+    <RosPublisherTopic ego_info="/actuate/ego14_info" />
+    <Player   id="14"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego15">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node15"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego15"
+        speed_topic="/actuate/speed/ego15"
+        steering_topic="/actuate/steering/ego15"
+        brake_topic="/actuate/brake/ego15" />
+    <RosPublisherTopic ego_info="/actuate/ego15_info" />
+    <Player   id="15"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego16">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node16"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego16"
+        speed_topic="/actuate/speed/ego16"
+        steering_topic="/actuate/steering/ego16"
+        brake_topic="/actuate/brake/ego16" />
+    <RosPublisherTopic ego_info="/actuate/ego16_info" />
+    <Player   id="16"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego17">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node17"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego17"
+        speed_topic="/actuate/speed/ego17"
+        steering_topic="/actuate/steering/ego17"
+        brake_topic="/actuate/brake/ego17" />
+    <RosPublisherTopic ego_info="/actuate/ego17_info" />
+    <Player   id="17"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego18">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node18"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego18"
+        speed_topic="/actuate/speed/ego18"
+        steering_topic="/actuate/steering/ego18"
+        brake_topic="/actuate/brake/ego18" />
+    <RosPublisherTopic ego_info="/actuate/ego18_info" />
+    <Player   id="18"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego19">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node19"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego19"
+        speed_topic="/actuate/speed/ego19"
+        steering_topic="/actuate/steering/ego19"
+        brake_topic="/actuate/brake/ego19" />
+    <RosPublisherTopic ego_info="/actuate/ego19_info" />
+    <Player   id="19"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego20">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node20"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego20"
+        speed_topic="/actuate/speed/ego20"
+        steering_topic="/actuate/steering/ego20"
+        brake_topic="/actuate/brake/ego20" />
+    <RosPublisherTopic ego_info="/actuate/ego20_info" />
+    <Player   id="20"/>
+</DynamicsPlugin> 
+
+
+
+<DynamicsPlugin name="ego21">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node21"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego21"
+        speed_topic="/actuate/speed/ego21"
+        steering_topic="/actuate/steering/ego21"
+        brake_topic="/actuate/brake/ego21" />
+    <RosPublisherTopic ego_info="/actuate/ego21_info" />
+    <Player   id="21"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego22">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node22"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego22"
+        speed_topic="/actuate/speed/ego22"
+        steering_topic="/actuate/steering/ego22"
+        brake_topic="/actuate/brake/ego22" />
+    <RosPublisherTopic ego_info="/actuate/ego22_info" />
+    <Player   id="22"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego23">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node23"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego23"
+        speed_topic="/actuate/speed/ego23"
+        steering_topic="/actuate/steering/ego23"
+        brake_topic="/actuate/brake/ego23" />
+    <RosPublisherTopic ego_info="/actuate/ego23_info" />
+    <Player   id="23"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego24">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node24"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego24"
+        speed_topic="/actuate/speed/ego24"
+        steering_topic="/actuate/steering/ego24"
+        brake_topic="/actuate/brake/ego24" />
+    <RosPublisherTopic ego_info="/actuate/ego24_info" />
+    <Player   id="24"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego25">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node25"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego25"
+        speed_topic="/actuate/speed/ego25"
+        steering_topic="/actuate/steering/ego25"
+        brake_topic="/actuate/brake/ego25" />
+    <RosPublisherTopic ego_info="/actuate/ego25_info" />
+    <Player   id="25"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego26">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node26"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego26"
+        speed_topic="/actuate/speed/ego26"
+        steering_topic="/actuate/steering/ego26"
+        brake_topic="/actuate/brake/ego26" />
+    <RosPublisherTopic ego_info="/actuate/ego26_info" />
+    <Player   id="26"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego27">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node27"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego27"
+        speed_topic="/actuate/speed/ego27"
+        steering_topic="/actuate/steering/ego27"
+        brake_topic="/actuate/brake/ego27" />
+    <RosPublisherTopic ego_info="/actuate/ego27_info" />
+    <Player   id="27"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego28">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node28"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego28"
+        speed_topic="/actuate/speed/ego28"
+        steering_topic="/actuate/steering/ego28"
+        brake_topic="/actuate/brake/ego28" />
+    <RosPublisherTopic ego_info="/actuate/ego28_info" />
+    <Player   id="28"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego29">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node29"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego29"
+        speed_topic="/actuate/speed/ego29"
+        steering_topic="/actuate/steering/ego29"
+        brake_topic="/actuate/brake/ego29" />
+    <RosPublisherTopic ego_info="/actuate/ego29_info" />
+    <Player   id="29"/>
+</DynamicsPlugin> 
+
+<DynamicsPlugin name="ego30">
+    <Load     lib="libmulti_ego.so" path="" />
+    <RosNode  node_name="node30"/>
+    <RosSubscriberTopic 
+        throttle_topic="/actuate/throttle/ego30"
+        speed_topic="/actuate/speed/ego30"
+        steering_topic="/actuate/steering/ego30"
+        brake_topic="/actuate/brake/ego30" />
+    <RosPublisherTopic ego_info="/actuate/ego30_info" />
+    <Player   id="30"/>
+</DynamicsPlugin> 
+
+
+<DynamicsPlugin name="viTrafficDynA">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego1" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+<DynamicsPlugin name="viTrafficDynB">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego2" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDynC">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego3" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDynD">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego4" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDynE">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego5" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDynF">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego6" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDynG">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego7" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDynH">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego8" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDynI">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego9" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDynJ">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego10" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDynK">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego11" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDynL">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego12" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDynM">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego13" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDynN">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego14" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDynO">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego15" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDynP">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego16" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDynPP">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego17" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDynQ">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego18" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDynR">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego19" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDynT">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego20" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDyn21">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego21" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDyn22">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego22" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDyn23">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego23" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDyn24">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego24" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDyn25">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego25" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDyn26">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego26" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDyn27">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego27" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDyn28">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego28" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDyn29">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego29" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+<DynamicsPlugin name="viTrafficDyn30">
+    <Load     lib="libModuleTrafficDyn.so" path=""/>
+    <Player   name="ego30" />
+    <Debug    enable="false" />
+</DynamicsPlugin>
+
+
+
+
+<!--DynamicsPlugin name="viTrafficDynComplex">
+    <Load     lib="libModuleTrafficDynComplex.so" path=""/>
+    <Player   default="true" />
+    <Debug    enable="false"
+              dynInput="true"
+              dynOutput="true"
+              CSV="false"
+              packages="true"/>
+</DynamicsPlugin-->

@@ -1,0 +1,9 @@
+float rpsStart 
+float torque
+float torqueInner
+float torqueMax
+float torqueFriction
+float fuelCurrent
+float fuelAverage
+float oilTemperature
+float temperature
